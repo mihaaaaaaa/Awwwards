@@ -3,7 +3,55 @@
 	background-color: white;
 	box-shadow: 0 2px 10px #565656;
 }
+.header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 .header-logo {
+	display: flex;
+	align-items: center;
+	height: 60px;
+	z-index: 2;
+}
+.header-logo img {
 	width: 40px;
-	width: 20px;
+}
+.nav-toggler{
+	position: relative;
+	width: 32px;
+	height: 32px;
+	z-index: 2;
+}
+.nav-toggler i {
+	display: block;
+	height: 2px;
+	width: 32px;
+	background-color: black;
+	margin-bottom: 8px;
+}
+.nav-toggler i:last-child{
+	margin-bottom: 0; 
+}
+.nav-menu{
+	position: fixed;
+	display: flex;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: white;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	z-index: 1;
+	transform: translateX(100%);
+	transition: .2s ease-out;
+}
+.nav-menu li {
+	margin: 15px 0;
+}
+.mobile-nav.-is-open .nav-menu {
+	transform: translateX(0);
 }
